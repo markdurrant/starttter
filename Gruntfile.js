@@ -42,13 +42,7 @@ module.exports = function (grunt) {
         options: {              // Target options
           sassDir: 'app/sass',
           cssDir: 'app/css',
-          environment: 'production'
-        }
-      },
-      dev: {                    // Another target
-        options: {
-          sassDir: 'app/sass',
-          cssDir: 'app/css'
+          environment: 'development'
         }
       }
     },
