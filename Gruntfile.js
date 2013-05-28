@@ -37,10 +37,18 @@ module.exports = function (grunt) {
       }
     },
 
-    sass: {
-      dist: {
-        files: {
-          'app/css/main.css': 'app/sass/main.scss'
+    compass: {                  // Task
+      dist: {                   // Target
+        options: {              // Target options
+          sassDir: 'app/sass',
+          cssDir: 'app/css',
+          environment: 'production'
+        }
+      },
+      dev: {                    // Another target
+        options: {
+          sassDir: 'app/sass',
+          cssDir: 'app/css'
         }
       }
     },
@@ -73,7 +81,7 @@ module.exports = function (grunt) {
       },
       css: {
         files: 'app/sass/*.scss',
-        tasks: ['sass']
+        tasks: ['compass']
       },
       html: {
         files: ['app/*.html', 'app/css/*.css'],
