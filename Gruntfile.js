@@ -38,7 +38,7 @@ module.exports = function (grunt) {
       }
     },
 
-    compass: {                  // Task
+    sass: {                  // Task
       dist: {                   // Target
         options: {              // Target options
           sassDir: 'app/sass',
@@ -76,7 +76,7 @@ module.exports = function (grunt) {
       },
       css: {
         files: 'app/sass/*.scss',
-        tasks: ['compass']
+        tasks: ['sass']
       },
       html: {
         files: ['app/*.html', 'app/css/*.css'],
