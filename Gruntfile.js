@@ -39,11 +39,16 @@ module.exports = function (grunt) {
     },
 
     sass: {                  // Task
-      dist: {                   // Target
-        options: {              // Target options
-          sassDir: 'app/sass',
-          cssDir: 'app/css',
-          environment: 'development'
+      // dist: {                   // Target
+      //   options: {              // Target options
+      //     sassDir: 'app/sass',
+      //     cssDir: 'app/css',
+      //     environment: 'development'
+      //   }
+      // }
+      dist: {                            // Target
+        files: {                         // Dictionary of files
+          'app/css/styles.css': 'app/sass/styles.scss'       // 'destination': 'source'
         }
       }
     },
